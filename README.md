@@ -44,13 +44,17 @@ This is a simple C# ToDoList application using **Entity Framework Core** and **S
 
     Click OK to restore the database
 
-3. **Update Connection String**:
+3. **Scaffold Database**:
+
+   dotnet ef dbcontext scaffold "Server=YOUR_SERVER_NAME;Database=ECommerce;Trusted_Connection=True;TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer -o Models --context ApplicationDbContext --use-database-names
+
+5. **Update Connection String**:
 
     Go to ApplicationDbContext.cs
 
     Update the options.UseSqlServer(...) with your local SQL Server instance
 
-4. **Build and Run**:
+6. **Build and Run**:
 
     Open the solution in Visual Studio or VS Code
 
